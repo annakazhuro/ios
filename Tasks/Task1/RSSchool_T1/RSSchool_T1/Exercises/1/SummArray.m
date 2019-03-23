@@ -5,12 +5,13 @@
 // Complete the summArray function below.
 - (NSNumber *)summArray:(NSArray *)array {
     [array retain];
-    [super dealloc];
-    NSInteger sum = 0;
-    for (NSNumber *num in array) {
-        sum += [num intValue];
+    
+    int sumOfElementsInArray = 0;
+    for (NSNumber *elementInArray in array) {
+        sumOfElementsInArray += [elementInArray intValue];
     }
-    NSNumber* s = [NSNumber numberWithInteger:sum];
+    NSNumber* s = [NSNumber numberWithInt:sumOfElementsInArray];
+    
     return s;
 }
 

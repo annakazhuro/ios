@@ -10,13 +10,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RSSchool_T1/Exercises/2/Diagonal.m"
-            timestampString = "574851255.518097"
+            timestampString = "575026838.5098439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-diagonalDifference:"
-            landmarkType = "7">
+            startingLineNumber = "42"
+            endingLineNumber = "42">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSchool_T1Tests/Diagonal_Test.m"
+            timestampString = "575026758.934962"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "Diagonal_Test"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
