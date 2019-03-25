@@ -10,9 +10,10 @@
     for (NSNumber *elementInArray in array) {
         sumOfElementsInArray += [elementInArray intValue];
     }
-    NSNumber* s = [NSNumber numberWithInt:sumOfElementsInArray];
+    NSNumber* resultOfSumOfArray = [[NSNumber numberWithInt:sumOfElementsInArray] autorelease];
+    [resultOfSumOfArray autorelease];
     
-    return s;
+    return resultOfSumOfArray;
 }
 
 @end

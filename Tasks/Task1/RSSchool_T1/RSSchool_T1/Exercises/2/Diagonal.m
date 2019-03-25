@@ -29,13 +29,14 @@
     }
     
     int difference = abs(sumOfMainDiag-sumOfSecondaryDiag);
-    NSNumber* result = [NSNumber numberWithInt:(difference)];
+    NSNumber* absDifferenceBtwSumsOfDiagonals = [[NSNumber numberWithInt:(difference)] autorelease];
     
     arrayOfMatrixLine = nil;
     [elementOfMainDiagonal release];
     [elemOfSecondaryDiagonal release];
+    [absDifferenceBtwSumsOfDiagonals autorelease];
     
-    return result;
+    return absDifferenceBtwSumsOfDiagonals;
 }
 
 @end

@@ -6,6 +6,7 @@
 - (BOOL)pangrams:(NSString *)string {
     [string retain];
     
+    
     NSMutableCharacterSet* setOfWhiteSpaceToFindPangram = [NSMutableCharacterSet whitespaceCharacterSet];
     [setOfWhiteSpaceToFindPangram formUnionWithCharacterSet:[NSMutableCharacterSet punctuationCharacterSet]];
     
@@ -24,8 +25,6 @@
     
     setOfWhiteSpaceToFindPangram = nil;
     alphabets = nil;
-    
-    
     
     return true;
 }

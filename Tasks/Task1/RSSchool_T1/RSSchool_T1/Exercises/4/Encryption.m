@@ -9,7 +9,7 @@
     
     NSString* mainString = [[NSString alloc] initWithString:string];
     NSUInteger sizeOfMainString = [mainString length];
-    NSString* resultString = [NSString new];
+    NSString* stringAfterEncryption = [[NSString new] autorelease];
     NSString* elementOfWordsInMainString = [[NSString alloc] init];
     NSString* charOfElementOfWords = [NSString new];
     
@@ -53,17 +53,17 @@
                     break;
                 }
                 charOfElementOfWords = [NSString stringWithFormat:@"%c", [elementOfWordsInMainString characterAtIndex:i]];
-                resultString = [resultString stringByAppendingString:charOfElementOfWords];
+                stringAfterEncryption = [stringAfterEncryption stringByAppendingString:charOfElementOfWords];
             }
             if (i != [words count] - 1 || i > elementOfWordsInMainString.length - 1 || j == [words count]) {
-                resultString = [resultString stringByAppendingString:@" "];
+                stringAfterEncryption = [stringAfterEncryption stringByAppendingString:@" "];
             }
         }
-        char lastCharacterInResultString = [resultString characterAtIndex:[resultString length]-1];
+        char lastCharacterInResultString = [stringAfterEncryption characterAtIndex:[stringAfterEncryption length]-1];
         
         if(lastCharacterInResultString == ' ') {
-            int lengthOfSubstring = (int)[resultString length] - 1;
-            resultString = [resultString substringToIndex:lengthOfSubstring];
+            int lengthOfSubstring = (int)[stringAfterEncryption length] - 1;
+            stringAfterEncryption = [stringAfterEncryption substringToIndex:lengthOfSubstring];
         }
         
         setOfWhiteSpaceForEncryption = nil;
@@ -73,8 +73,9 @@
     [mainString release];
     [elementOfWordsInMainString release];
     [charOfElementOfWords release];
-
-    return resultString;
+    [string autorelease];
+    
+    return stringAfterEncryption;
 }
 @end
 
