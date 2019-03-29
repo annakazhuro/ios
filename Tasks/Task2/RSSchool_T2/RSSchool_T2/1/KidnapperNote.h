@@ -14,5 +14,5 @@
  @param note a string, representing a desired ransom note
  @return flag indicating if a magazine can be used for a ransom note, YES or NO
  */
-- (BOOL)checkMagazine:(NSString *)magaine note:(NSString *)note;
+- (BOOL)checkMagazine:(NSString *)magazine note:(NSString *)note;
 @end
