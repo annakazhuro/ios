@@ -5,7 +5,31 @@
 - (NSString *)romanFromArabic:(NSString *)arabicString {
     [arabicString retain];
     
-    return @"";
+    id objects[] = { @"I", @"II", @"III", @"IV",  @"V", @"VI", @"VII", @"VIII", @"IX", @"X", @"XX", @"XXX", @"XL", @"L", @"LX", @"LXX", @"LXXX", @"XC", @"C", @"CC", @"CCC", @"CD", @"D", @"DC", @"DCC", @"DCCC", @"CM", @"M"};
+    id keys[] = { @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"20", @"30", @"40", @"50", @"60", @"70", @"80", @"90", @"100", @"200", @"300", @"400", @"500", @"600", @"700", @"800", @"900", @"1000"};
+    NSUInteger count = sizeof(objects) / sizeof(id);
+    NSDictionary *combinations = [NSDictionary dictionaryWithObjects:objects forKeys:keys count:count];
+    NSString *result = [[NSString alloc] init];
+    NSMutableString* totalResult = [NSMutableString new];
+    int d= 0;
+    int num = [arabicString intValue];
+    int iteration = 0;
+    int multiplier = 0;
+    
+    do {
+        d = num%10;
+        multiplier = d*(int)pow(10, (double)iteration);
+        result = [combinations valueForKey:[NSString stringWithFormat:@"%d", multiplier]];
+        totalResult = [[result stringByAppendingString: totalResult] mutableCopy];
+        num = num/10;
+        iteration++;
+    } while (num>0);
+    
+    [arabicString release];
+    combinations = nil;
+    [result release];
+    
+    return [totalResult autorelease];
 }
 
 - (NSString *)arabicFromRoman:(NSString *)romanString{
@@ -39,6 +63,10 @@
         j=abs(i);
     }
     
+    roman = nil;
+    arr = nil;
+    [romanString release];
+
     return ([NSString stringWithFormat:@"%d", sum]);
 }
 @end
