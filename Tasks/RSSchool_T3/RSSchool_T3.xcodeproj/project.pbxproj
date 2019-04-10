@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03815BEC225E5FCD00D3CFA9 /* ResultStringCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03815BEB225E5FCD00D3CFA9 /* ResultStringCreation.m */; };
 		E3821557225B533B00E3B12B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3821556225B533B00E3B12B /* AppDelegate.m */; };
 		E382155F225B533E00E3B12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E382155E225B533E00E3B12B /* Assets.xcassets */; };
 		E3821562225B533E00E3B12B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3821560225B533E00E3B12B /* LaunchScreen.storyboard */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03815BEA225E5FCD00D3CFA9 /* ResultStringCreation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultStringCreation.h; sourceTree = "<group>"; };
+		03815BEB225E5FCD00D3CFA9 /* ResultStringCreation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultStringCreation.m; sourceTree = "<group>"; };
 		E3821552225B533B00E3B12B /* RSSchool_T3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3821555225B533B00E3B12B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E3821556225B533B00E3B12B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 		E39C2569225B88F700C3BCC1 /* 1 */ = {
 			isa = PBXGroup;
 			children = (
+				03815BEA225E5FCD00D3CFA9 /* ResultStringCreation.h */,
+				03815BEB225E5FCD00D3CFA9 /* ResultStringCreation.m */,
 				E39C256A225B898A00C3BCC1 /* ArrayPrint.h */,
 				E39C256B225B898A00C3BCC1 /* ArrayPrint.m */,
 			);
@@ -299,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03815BEC225E5FCD00D3CFA9 /* ResultStringCreation.m in Sources */,
 				E39C256C225B898A00C3BCC1 /* ArrayPrint.m in Sources */,
 				E3821565225B533E00E3B12B /* main.m in Sources */,
 				E39C2577225CAA7E00C3BCC1 /* DateMachine.m in Sources */,
