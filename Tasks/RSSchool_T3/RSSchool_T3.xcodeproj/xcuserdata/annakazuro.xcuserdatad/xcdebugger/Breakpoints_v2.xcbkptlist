@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RSSchool_T3/1/ArrayPrint.h"
-            timestampString = "576614056.5524451"
+            timestampString = "576616889.356557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -24,7 +24,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RSSchool_T3/1/ArrayPrint.h"
-            timestampString = "576614056.55264"
+            timestampString = "576616889.3590159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -36,47 +36,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RSSchool_T3/1/ResultStringCreation.m"
-            timestampString = "576614056.55277"
+            timestampString = "576664786.563856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
             landmarkName = "-getResultString:"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[ResultStringCreation getResultString:]"
                   moduleName = "RSSchool_T3"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/annakazuro/Desktop/ProjectsRS_anna/ios/Tasks/RSSchool_T3/RSSchool_T3/1/ResultStringCreation.m"
-                  timestampString = "576614056.579874"
+                  timestampString = "576661953.572847"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "123">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "176">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[ResultStringCreation getResultString:]"
                   moduleName = "RSSchool_T3"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/annakazuro/Desktop/ProjectsRS_anna/ios/Tasks/RSSchool_T3/RSSchool_T3/1/ResultStringCreation.m"
-                  timestampString = "576614056.587034"
+                  timestampString = "576661953.584258"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "152">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "205">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RSSchool_T3/1/ResultStringCreation.m"
-            timestampString = "576614056.553498"
+            timestampString = "576664786.5658571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "-getResultString:"
             landmarkType = "7">
          </BreakpointContent>
@@ -100,11 +100,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RSSchool_T3/1/ArrayPrint.m"
-            timestampString = "576614056.554027"
+            timestampString = "576664786.56662"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -116,32 +116,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RSSchool_T3/1/ResultStringCreation.m"
-            timestampString = "576614056.554168"
+            timestampString = "576664786.5667779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-getString:"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-getResultString:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSSchool_T3/1/ResultStringCreation.m"
-            timestampString = "576614099.162442"
+            filePath = "RSSchool_T3/1/ArrayPrint.m"
+            timestampString = "576664786.567273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-getString:"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "-print"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

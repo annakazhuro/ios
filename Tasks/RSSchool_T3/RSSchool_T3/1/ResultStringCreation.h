@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface ResultStringCreation : NSObject
-- (NSString *)getResultString:(NSArray *)someArray;
 
-- (NSString *)getString:(NSObject *)object;
+- (NSString *)getResultString:(NSArray *)someArray;
 @end
