@@ -50,7 +50,6 @@
     _textField1.backgroundColor = [UIColor lightGrayColor];
     _textField1.layer.cornerRadius = 3;
     _textField1.alpha = 0.5;
-    [_textField1 addTarget:self action:@selector(setStartDate) forControlEvents:UIControlEventEditingDidEnd];
     [view1 addSubview:_textField1];
     
     _textField2 = [[UITextField alloc] initWithFrame:CGRectMake(50, 320, 280, 40)];
@@ -74,13 +73,14 @@
 - (NSDateFormatter*)createDateFormatter {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy HH:mm"];
-    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT+3"]];
     [formatter setLocale:[NSLocale autoupdatingCurrentLocale]];
     return formatter;
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    [self setStartDate];
     [textField resignFirstResponder];
     return YES;
 }
@@ -92,6 +92,15 @@
     if (changes.length > 0 && dateFromTextField) {
         _label.text = _textField1.text;
     }
+}
+
+- (BOOL)checkDateUnit:(NSMutableString*)dateUnitFromTextField {
+    [dateUnitFromTextField retain];
+    dateUnitFromTextField = [[dateUnitFromTextField lowercaseString] mutableCopy];
+    if ([dateUnitFromTextField isEqualToString:@"year"]|[dateUnitFromTextField isEqualToString:@"month"]|[dateUnitFromTextField isEqualToString:@"day"]|[dateUnitFromTextField isEqualToString:@"hour"]|[dateUnitFromTextField isEqualToString:@"minute"]) {
+        return YES;
+    }
+    return NO;
 }
 
 - (void)addSomeValue {
@@ -144,6 +153,41 @@
     NSDate *newDate = [theCalendar dateByAddingComponents:dateComponent toDate:currentDate options:0];
     return newDate;
 }
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    NSCharacterSet *characterSetFromTextField = [NSCharacterSet characterSetWithCharactersInString:string];
+    if (textField == _textField1) {
+        NSCharacterSet *allowedCharacters = [NSCharacterSet characterSetWithCharactersInString:@" 0123456789/:"];
+        if ([allowedCharacters isSupersetOfSet:characterSetFromTextField]) {
+            return YES;
+        }
+    }
+
+    if (textField == _textField2) {
+        NSCharacterSet *numbersOnly = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+        if ([numbersOnly isSupersetOfSet:characterSetFromTextField]) {
+            return YES;
+        }
+    }
+    
+
+    if (textField == _textField3)
+    {
+        NSMutableCharacterSet *lettersOnly = [NSMutableCharacterSet letterCharacterSet];
+        [lettersOnly formUnionWithCharacterSet:[NSCharacterSet uppercaseLetterCharacterSet]];
+        
+        if ([lettersOnly isSupersetOfSet:characterSetFromTextField])
+        {
+            [self checkDateUnit:(NSMutableString*)_textField3.text];
+            return YES;
+        }
+    }
+
+    
+    return NO;
+}
+
 @end
 
 

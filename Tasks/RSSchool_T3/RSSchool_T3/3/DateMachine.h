@@ -43,9 +43,10 @@
 @property(nonatomic, strong) UITextField* textField3;
 
 - (void)setStartDate;
+- (BOOL)checkDateUnit:(NSMutableString*)dateUnitFromTextField;
 - (void)addSomeValue;
 - (void)subSomeValue;
-- (void) buttonOnClickMethod:(NSString*) buttonName;
+- (void)buttonOnClickMethod:(NSString*) buttonName;
 - (NSDateFormatter*)createDateFormatter;
 - (NSDate*)newDateWithComponent: (NSInteger)component from: (NSDate*)currentDate;
 
