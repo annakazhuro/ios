@@ -35,6 +35,7 @@
  09/04/2019 00:00
 */
 @interface DateMachine : UIViewController
+
 @property(nonatomic, strong) UILabel* label;
 @property(nonatomic, strong) UIButton* addButton;
 @property(nonatomic, strong) UIButton* subButton;
@@ -42,7 +43,7 @@
 @property(nonatomic, strong) UITextField* textField2;
 @property(nonatomic, strong) UITextField* textField3;
 
-- (void)setStartDate;
+- (void)setStartDate: (NSRange)range with:(NSString*)string;
 - (BOOL)checkDateUnit:(NSMutableString*)dateUnitFromTextField;
 - (void)addSomeValue;
 - (void)subSomeValue;
