@@ -35,4 +35,22 @@
  09/04/2019 00:00
 */
 @interface DateMachine : UIViewController
+@property(nonatomic, strong) UILabel* label;
+@property(nonatomic, strong) UIButton* addButton;
+@property(nonatomic, strong) UIButton* subButton;
+@property(nonatomic, strong) UITextField* textField1;
+@property(nonatomic, strong) UITextField* textField2;
+@property(nonatomic, strong) UITextField* textField3;
+
+- (void)setStartDate;
+- (void)addSomeValue;
+- (void)subSomeValue;
+- (void) buttonOnClickMethod:(NSString*) buttonName;
+- (NSDateFormatter*)createDateFormatter;
+- (NSDate*)newDateWithComponent: (NSInteger)component from: (NSDate*)currentDate;
+
+@end
+
+@interface DateMachine()<UITextFieldDelegate>
+- (BOOL)textFieldShouldReturn: (UITextField*)textField;
 @end
