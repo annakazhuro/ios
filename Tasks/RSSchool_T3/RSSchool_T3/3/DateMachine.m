@@ -12,12 +12,12 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // have fun
-    UIImageView *img = [[UIImageView alloc] init];
-    img.image = [UIImage imageNamed:@"11.jpg"];
-    img.frame = self.view.frame;
-    img.center = self.view.center;
-    img.alpha = 1;
-    [self.view addSubview:img];
+    UIImageView *myImage = [[UIImageView alloc] init];
+    myImage.image = [UIImage imageNamed:@"backgroundImage.jpg"];
+    myImage.frame = self.view.frame;
+    myImage.center = self.view.center;
+    myImage.alpha = 1;
+    [self.view addSubview:myImage];
     
     UIView *view1 = [[UIView alloc] initWithFrame:self.view.bounds];
     view1.backgroundColor = [UIColor clearColor];
