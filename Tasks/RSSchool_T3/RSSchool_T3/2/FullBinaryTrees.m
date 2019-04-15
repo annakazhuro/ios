@@ -4,48 +4,36 @@
 @implementation FullBinaryTrees : NSObject
 
 - (NSString *)stringForNodeCount:(NSInteger)count {
-//    NSInteger height = ceil(count/2);
-//    NSMutableArray* binaryTreeArray = [NSMutableArray new];
-//    FullBinaryTreeArray* obj = [FullBinaryTreeArray new];
-//    for (int i = 0; i < height; i++) {
-//        if (i == 0) {
-//            [binaryTreeArray insertObject:@"0" atIndex:i];
-//        }
-//        [binaryTreeArray insertObject:[obj arayForCurrentHeight:i] atIndex:i];
-//    }
-   // NSMapTable *hashMap = [[NSMapTable alloc] init];
-    NSHashTable *table = [NSHashTable new];
-    
-    table = [self arrayOfFullBinaryTrees:count];
-    
-    NSArray* resultArray = [NSArray new];
-    resultArray = [NSArray arrayWithObjects:[table allObjects], nil];
+    NSMutableDictionary *dictionary = [NSMutableDictionary new];
+    NSArray* resultArray = [NSArray arrayWithArray:[self arrayOfFullBinaryTrees:count with:dictionary]];
     NSString* resultString = [resultArray componentsJoinedByString:@","];
     
     return resultString;
 }
 
-- (NSHashTable*)arrayOfFullBinaryTrees:(NSInteger)count {
-    NSHashTable* table = [NSHashTable new];
-    NSMutableArray* arr = [NSMutableArray new];
-    
-        if (count == 0) {
+- (NSArray*)arrayOfFullBinaryTrees:(NSInteger)count with:(NSMutableDictionary*)dict {
+    if (![dict objectForKey:@(count)]) {
+        NSMutableArray<NSString*> *arr = [[NSMutableArray alloc] init];
+        if (count == 1) {
             [arr addObject:@"0"];
         } else if (count % 2 == 1) {
             for (int x = 0; x < count; ++x) {
                 int y = (int)count - 1 - x;
-                for (FullBinaryTrees *left in [self arrayOfFullBinaryTrees:x]) {
-                    for (FullBinaryTrees *right in [self arrayOfFullBinaryTrees:y]) {
+                for (FullBinaryTrees *left in [self arrayOfFullBinaryTrees:x with:dict])
+                    for (FullBinaryTrees *right in [self arrayOfFullBinaryTrees:y with:dict]) {
                         FullBinaryTrees* bns = [[FullBinaryTrees alloc] init];
                         bns.leftNode = left;
                         bns.rightNode = right;
-                        [arr addObject:bns];
+                        [arr addObject:[NSString stringWithFormat:@"%@%@%@",@"0", bns.leftNode,bns.rightNode]];
                     }
-                }
             }
-           [table addObject:arr];
         }
-    return table;
+        if(arr.count == 0) {
+            [arr addObject:@"null"];
+        }
+        [dict setObject:(NSArray*)arr forKey:@(count)];
+    }
+    return [dict objectForKey:@(count)];
 }
 
 @end
