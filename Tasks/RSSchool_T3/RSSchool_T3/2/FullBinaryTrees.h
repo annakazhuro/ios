@@ -22,5 +22,9 @@
  Note: trailing null nodes are omitted from the output.
  */
 @interface FullBinaryTrees : NSObject
+
+@property(nonatomic,strong) FullBinaryTrees* leftNode;
+@property(nonatomic,strong) FullBinaryTrees* rightNode;
+
 - (NSString *)stringForNodeCount:(NSInteger)count;
 @end
