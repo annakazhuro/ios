@@ -203,7 +203,6 @@
         flagLabel.backgroundColor = [UIColor clearColor];
         flagLabel.frame = [self.view viewWithTag:4].frame;
         [self.view addSubview:flagLabel];
-        [flagLabel release];
         return;
     }
     phoneNumber = [phoneNumber stringByReplacingOccurrencesOfString:@"+" withString:@""];
