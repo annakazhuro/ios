@@ -257,12 +257,10 @@
                 flagLabel.text = @"";
                 break;
             }
-            if ([[NSString stringWithFormat:@"%c", [phoneNumber characterAtIndex:1]] isEqualToString:@"6"]) {
-                flagLabel.text = [codes valueForKey:@"76"];
-            } else if ([[NSString stringWithFormat:@"%c", [phoneNumber characterAtIndex:1]] isEqualToString:@"7"]) {
+            if ([[NSString stringWithFormat:@"%c", [phoneNumber characterAtIndex:1]] isEqualToString:@"7"]) {
                 flagLabel.text = [codes valueForKey:@"77"];
             } else {
-                flagLabel.text = @"";
+                flagLabel.text = [codes valueForKey:@"7"];
             }
             break;
         default:
@@ -301,7 +299,7 @@
 
 - (NSDictionary*)tableForCodeRecognizing {
     NSDictionary *countryCodeToCountry = @{
-                                           @"76":@"🇷🇺",
+                                           @"7":@"🇷🇺",
                                            @"77":@"🇰🇿",
                                            @"373":@"🇲🇩",
                                            @"374":@"🇦🇲",
